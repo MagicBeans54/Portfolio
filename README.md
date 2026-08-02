@@ -13,6 +13,7 @@ A fast, modern, and responsive developer portfolio website built using **React**
 - 💨 Tailwind CSS (utility-first styling)
 - 🔧 JavaScript (ES6+)
 - 💡 Optional: Framer Motion for animations
+-  ai chatbot : underdevelopment
 
 ## 📸 Screenshots
 
