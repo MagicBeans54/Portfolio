@@ -1,5 +1,5 @@
 import { Navbar } from "../components/Navbar";
-import { StarBackground } from "@/components/StarBackground";
+import { HexagonBackground } from "@/components/HexagonBackground";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
@@ -12,7 +12,9 @@ export const Home = () => {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
       {/* Background Effects */}
-      <StarBackground />
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <HexagonBackground className="absolute inset-0 pointer-events-auto" />
+      </div>
 
       {/* Navbar */}
       <Navbar />

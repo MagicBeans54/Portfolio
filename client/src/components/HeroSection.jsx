@@ -1,4 +1,4 @@
-import { ArrowDown, MousePointerClick, Sparkles, Code, Palette, Rocket, Award, Download, Calendar, Shield, Zap, Users, TrendingUp, Briefcase, Mail } from "lucide-react";
+import { MousePointerClick, Code, Shield, Zap, TrendingUp, Briefcase, Mail } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -9,17 +9,12 @@ export const HeroSection = () => {
   const achievements = [
     { number: "1+", label: "Years in Production", icon: <Shield className="h-3 w-3" /> },
     { number: "15+", label: "Projects Delivered", icon: <TrendingUp className="h-3 w-3" /> },
-    { number: "100%", label: "Client Satisfaction", icon: <Award className="h-3 w-3" /> },
+    { number: "100%", label: "Client Satisfaction", icon: <Zap className="h-3 w-3" /> },
     { number: "15+", label: "Projects completed", icon: <Zap className="h-3 w-3" /> }
   ];
 
-  const handleViewResume = () => {
-    // Open resume in new tab
-    // window.open('/Sahil-resume.pdf', '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/10" ref={ref}>
+    <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-background/80 via-background/70 to-primary/5" ref={ref}>
       
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
@@ -88,25 +83,15 @@ export const HeroSection = () => {
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                <Code className="h-5 w-5" /> 
+                <Code className="h-5 w-5" />
                 <span>View Case Studies</span>
                 <TrendingUp className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-              
+
               <motion.a href="#contact" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold border border-primary/50 text-foreground hover:border-primary transition-all duration-300 bg-background/80 backdrop-blur-sm text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                <Mail className="h-4 w-4" /> 
+                <Mail className="h-4 w-4" />
                 <span>Technical Interview</span>
               </motion.a>
-              
-              <motion.button 
-                onClick={handleViewResume}
-                className="group relative overflow-hidden px-6 py-4 rounded-xl font-semibold border border-border text-muted-foreground hover:border-primary/30 transition-all duration-300 bg-background/60 backdrop-blur-sm text-sm flex items-center justify-center gap-2" 
-                whileHover={{ scale: 1.05, y: -2 }} 
-                whileTap={{ scale: 0.95 }}
-              >
-                <Download className="h-4 w-4" /> 
-                <span>View Resume</span>
-              </motion.button>
             </motion.div>
 
             <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
