@@ -88,7 +88,7 @@ export const Navbar = () => {
       const scrollPosition = currentScrollY + 100;
 
       for (const section of sections) {
-        const element = document.querySelector(section);
+        const element = document.querySelector(section) as HTMLElement;
         if (element) {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
@@ -113,7 +113,7 @@ export const Navbar = () => {
       <>
         {/* Top Right Buttons */}
         <motion.div
-          className="fixed top-4 right-4 z-50 flex gap-2"
+          className="fixed top-4 right-4 z-50 flex gap-2 pointer-events-auto"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -221,7 +221,7 @@ export const Navbar = () => {
         {/* Bottom Navbar */}
         <motion.div
           className={cn(
-            "fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50",
+            "fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 pointer-events-auto",
             "transition-transform duration-300 ease-in-out",
             showNavbar ? "translate-y-0" : "translate-y-full"
           )}

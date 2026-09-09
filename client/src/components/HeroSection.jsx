@@ -1,6 +1,7 @@
 import { MousePointerClick, Code, Briefcase, Mail } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import InfiniteSpiral from "@/components/ui/InfiniteSpiral";
 
 export const HeroSection = () => {
   const ref = useRef(null);
@@ -46,10 +47,10 @@ export const HeroSection = () => {
       </div>
 
       <div className="container max-w-7xl mx-auto w-full mt-16 sm:mt-0">
-        <motion.div className="flex items-center justify-center" initial="hidden" animate={isInView ? "visible" : "hidden"} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }}>
+        <motion.div className="flex flex-col lg:flex-row items-center justify-center gap-12" initial="hidden" animate={isInView ? "visible" : "hidden"} variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }}>
           
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
-            <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
+            <motion.div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8 backdrop-blur-sm pointer-events-auto" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <Briefcase className="h-4 w-4" /> Currently Accepting new Opportunities
             </motion.div>
 
@@ -64,7 +65,7 @@ export const HeroSection = () => {
               I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Laravel, Inertia, and scalable architecture for startups and enterprises.
             </motion.p>
 
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
+            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pointer-events-auto" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Code className="h-5 w-5" />
                 <span>View Case Studies</span>
@@ -83,11 +84,42 @@ export const HeroSection = () => {
             </motion.div>
           </div>
 
+          <motion.div 
+            className="hidden lg:flex flex-1 justify-center items-center"
+            variants={{ hidden: { x: 50, opacity: 0 }, visible: { x: 0, opacity: 1, transition: { duration: 0.8, delay: 0.3 } } }}
+          >
+            <div style={{ height: '600px', position: 'relative', overflow: 'hidden', width: '100%' }}>
+              <InfiniteSpiral
+                items={[
+                  { src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=400&fit=crop', alt: 'Code on screen' },
+                  { src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop', alt: 'Programming' },
+                  { src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop', alt: 'Web development' },
+                  { src: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=400&h=400&fit=crop', alt: 'JavaScript code' },
+                  { src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=400&fit=crop', alt: 'React development' },
+                  { src: 'https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=400&h=400&fit=crop', alt: 'Software engineering' },
+                  { src: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=400&fit=crop', alt: 'Cybersecurity' },
+                  { src: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=400&fit=crop', alt: 'Data analysis' }
+                ]}
+                animationMode="all"
+                speed={0.55}
+                radius={170}
+                cardWidth={120}
+                cardHeight={120}
+                verticalSpacing={60}
+                perspective={1000}
+                cardRadius={12}
+                centerScale={1.2}
+                edgeBlur={6}
+                cardsPerTurn={7}
+                pauseOnHover
+              />
+            </div>
+          </motion.div>
 
         </motion.div>
       </div>
 
-      <motion.div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: [0, 1, 1, 0], y: [0, 6, 0, -6] }} transition={{ duration: 3, repeat: Infinity, repeatDelay: 0.5 }}>
+      <motion.div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center pointer-events-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: [0, 1, 1, 0], y: [0, 6, 0, -6] }} transition={{ duration: 3, repeat: Infinity, repeatDelay: 0.5 }}>
         <motion.div className="text-xs text-primary mb-3 flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border shadow-lg" whileHover={{ scale: 1.05 }}>
           <MousePointerClick className="h-3 w-3" />
           <span>Explore Technical Portfolio</span>

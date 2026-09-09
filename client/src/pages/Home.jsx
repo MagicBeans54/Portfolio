@@ -12,14 +12,14 @@ export const Home = () => {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
       {/* Background Effects */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      <div className="fixed inset-0 z-0">
         <HexagonBackground className="absolute inset-0 pointer-events-auto" />
       </div>
 
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}
-      <main>
+      <main className="relative z-10 pointer-events-none">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

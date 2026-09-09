@@ -14,7 +14,7 @@ function HexagonBackground({
   className,
   children,
   hexagonProps,
-  hexagonSize = 75,
+  hexagonSize = 70,
   hexagonMargin = 3,
   ...props
 }: HexagonBackgroundProps) {
@@ -47,7 +47,7 @@ function HexagonBackground({
     <div
       data-slot="hexagon-background"
       className={cn(
-        'relative size-full overflow-hidden dark:bg-transparent bg-transparent',
+        'relative size-full overflow-hidden dark:bg-black bg-slate-800',
         className,
       )}
       {...props}
@@ -80,13 +80,13 @@ function HexagonBackground({
                   className={cn(
                     'relative cursor-pointer',
                     '[clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)]',
-                    "before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full dark:before:bg-neutral-900/30 before:bg-white/15 before:opacity-100 before:transition-all before:duration-1000",
-                    "after:content-[''] after:absolute after:inset-[var(--hexagon-margin)] dark:after:bg-neutral-800/15 after:bg-gray-200/15",
+                    "before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full dark:before:bg-yellow-500 before:bg-yellow-400 before:opacity-60 before:transition-all before:duration-1000",
+                    "after:content-[''] after:absolute after:inset-[var(--hexagon-margin)] dark:after:bg-black after:bg-slate-800",
                     'after:[clip-path:polygon(50%_0%,_100%_25%,_100%_75%,_50%_100%,_0%_75%,_0%_25%)]',
-                    'dark:drop-shadow-[0_0_2px_rgba(255,215,0,0.4)] drop-shadow-[0_0_2px_rgba(255,215,0,0.3)]',
-                    'hover:before:bg-blue-500/60 dark:hover:before:bg-blue-400/70 hover:before:opacity-100 hover:before:duration-300 hover:before:transition-all',
-                    'hover:after:bg-blue-500/70 dark:hover:after:bg-blue-400/80 hover:after:opacity-100 hover:after:duration-300 hover:after:transition-all',
-                    'hover:drop-shadow-[0_0_30px_rgba(59,130,246,1)] dark:hover:drop-shadow-[0_0_40px_rgba(96,165,250,1)]',
+                    'dark:drop-shadow-[0_0_4px_rgba(255,215,0,1)] drop-shadow-[0_0_4px_rgba(255,215,0,1)]',
+                    'hover:before:bg-yellow-400 dark:hover:before:bg-yellow-300 hover:before:opacity-100 hover:before:duration-300 hover:before:transition-all',
+                    'hover:after:bg-yellow-400 dark:hover:after:bg-yellow-300 hover:after:opacity-100 hover:after:duration-300 hover:after:transition-all',
+                    'hover:drop-shadow-[0_0_50px_rgba(255,215,0,1)] dark:hover:drop-shadow-[0_0_60px_rgba(255,215,0,1)]',
                     'hover:scale-110 hover:transition-transform hover:duration-300',
                     hexagonProps?.className,
                   )}

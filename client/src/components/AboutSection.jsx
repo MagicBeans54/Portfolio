@@ -57,7 +57,7 @@ export const AboutSection = () => {
       <div className="container mx-auto max-w-7xl relative">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20 px-2 sm:px-6">
-          <div className="inline-flex items-center gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-primary/10 border border-primary/20 mb-6 transition-all duration-500 hover:bg-primary/15 hover:scale-105 group cursor-pointer">
+          <div className="inline-flex items-center gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-2xl bg-primary/10 border border-primary/20 mb-6 transition-all duration-500 hover:bg-primary/15 hover:scale-105 group cursor-pointer pointer-events-auto">
             <div className="relative">
               <Sparkles className="h-4 sm:h-5 w-4 sm:w-5 text-primary animate-pulse" />
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full animate-ping" />
@@ -104,7 +104,7 @@ export const AboutSection = () => {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex flex-col sm:flex-row border-b border-border mb-4 sm:mb-6">
+                <div className="flex flex-col sm:flex-row border-b border-border mb-4 sm:mb-6 pointer-events-auto">
                   {['personal', 'professional', 'approach'].map(tab => (
                     <button
                       key={tab}
@@ -162,7 +162,7 @@ export const AboutSection = () => {
           {/* Right Column */}
           <div className="space-y-6 sm:space-y-8">
             {/* Work Together */}
-            <div className="bg-card/50 border border-border rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:shadow-3xl hover:border-primary/40 hover:bg-card/60">
+            <div className="bg-card/50 border border-border rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:shadow-3xl hover:border-primary/40 hover:bg-card/60 pointer-events-auto">
               <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Let's Work Together</h3>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
                 <a href="#contact" className="flex-1 block w-full p-3 sm:p-4 bg-primary text-primary-foreground rounded-xl text-center font-semibold transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-lg group">
@@ -182,7 +182,7 @@ export const AboutSection = () => {
               </div>
 
               {/* Social Links */}
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-background/50 rounded-xl border border-border">
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-background/50 rounded-xl border border-border pointer-events-auto">
                 <h4 className="font-semibold mb-2 text-center text-sm sm:text-base">Quick Connect</h4>
                 <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                   {socialLinks.map((social, index) => (

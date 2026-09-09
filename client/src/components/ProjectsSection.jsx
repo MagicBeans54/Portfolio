@@ -240,7 +240,7 @@ export const ProjectsSection = () => {
 
         {/* Simple Filter */}
         <motion.div 
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-12 pointer-events-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -266,7 +266,7 @@ export const ProjectsSection = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 pointer-events-auto">
           <AnimatePresence mode="wait">
             {displayedProjects.map((project, index) => (
               <motion.div

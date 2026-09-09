@@ -59,7 +59,7 @@ export const Footer = () => {
       <div className="max-w-6xl mx-auto">
         {/* Glass background container */}
         <motion.div 
-          className="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-xl p-8 border border-white/20 dark:border-gray-700/50 shadow-lg"
+          className="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 rounded-xl p-8 border border-white/20 dark:border-gray-700/50 shadow-lg pointer-events-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
