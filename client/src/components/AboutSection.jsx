@@ -1,49 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import { Briefcase, Code, User, Download, Calendar, Sparkles, Target, Github, Linkedin, Twitter, Mail, Star } from 'lucide-react';
+import { Code, User, Download, Sparkles, Github, Linkedin, Twitter, Mail, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const AboutSection = () => {
   const [activeTab, setActiveTab] = useState('personal');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [counter, setCounter] = useState(0);
-
-  const achievements = [
-    { number: "15+", label: "Projects", icon: <Briefcase className="h-5 w-5" />, suffix: "" },
-    { number: "1", label: "Years Exp", icon: <Calendar className="h-5 w-5" />, suffix: "+" },
-    { number: "99", label: "Success", icon: <Target className="h-5 w-5" />, suffix: "%" },
-    { number: "10", label: "Clients", icon: <User className="h-5 w-5" />, suffix: "+" }
-  ];
 
   const techStack = [
     { category: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "Tailwind"] },
     { category: "Backend", items: ["Node.js", "Express", "Java", "Python"] },
-    { category: "Cloud", items: ["AWS", "Docker", "Vercel", "MongoDB"] }
+    { category: "Cloud", items: ["AWS","Railway", "Vercel", "MongoDB"] }
   ];
 
-  const features = ["Full-stack expertise", "Clean, maintainable code", "Performance optimization", "Agile methodology", "24/7 support", "Timely delivery"];
+  const features = ["experienced Web Developer", "Clean, maintainable code", "Performance optimization", "Agile methodology", "24/7 support",];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://www.github.com/sahilmd01" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://www.linkedin.com/in/codewithkinu" },
+    { icon: <Github className="h-5 w-5" />, href: "#" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "#" },
     { icon: <Twitter className="h-5 w-5" />, href: "#" },
-    { icon: <Mail className="h-5 w-5" />, href: "mailto:sahilmd.dev@gmail.com" }
+    { icon: <Mail className="h-5 w-5" />, href: "mailto:vincentcruz54@gmail.com" }
   ];
 
   const tabContent = {
-    personal: "Passionate about creating digital solutions that make a difference. When I'm not coding, I'm exploring new technologies, contributing to open-source, and mentoring aspiring developers.",
-    professional: "With 1+ years in full-stack development, I've delivered 15+ successful projects using modern technologies. I specialize in scalable architecture and performance optimization.",
-    approach: "I believe in clean code, thorough testing, and user-centered design. My process emphasizes collaboration, agile methodologies, and continuous improvement."
+    personal: "Passionate about creating digital solutions that make a difference. When I'm not coding, I'm exploring new technologies and staying updated with industry trends.",
+    professional: "Experienced in building scalable web applications with modern technologies. I focus on creating efficient, maintainable, and user-friendly solutions.",
+    approach: "I believe in thorough testing, and user-centered design. My process emphasizes collaboration, agile methodologies, and continuous improvement."
   };
 
   useEffect(() => {
     const handleMouseMove = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => setCounter(prev => (prev + 1) % 4), 2000);
-    return () => clearInterval(interval);
   }, []);
 
   // Programmatic download function
@@ -102,30 +89,17 @@ export const AboutSection = () => {
                   {/* Profile Image */}
                   <div className="relative flex-shrink-0">
                     <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl transition-all duration-500 group-hover:border-primary/40 group-hover:scale-105 md:group-hover:scale-110 relative">
-                      <img src="/profile-logo.png" alt="MD Sahil" className="w-full h-full object-cover" />
+                      <img src="/profile-logo.png" alt="BACKDROP" className="w-full h-full object-cover" />
                       <div className="absolute -bottom-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full border-4 border-background flex items-center justify-center">
                         <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                       </div>
                     </div>
                   </div>
 
-                  {/* Achievements */}
+                  {/* Name and Title */}
                   <div className="flex-1 text-center md:text-left">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">MD Sahil</h2>
-                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-4">Full Stack Developer</p>
-                    <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
-                      {achievements.map((achievement, index) => (
-                        <div key={index} className={`p-2 sm:p-3 rounded-xl bg-background/50 border border-border transition-all duration-300 hover:scale-105 hover:border-primary/30 ${counter === index ? 'bg-primary/10 border-primary/50' : ''}`}>
-                          <div className="flex items-center gap-2 justify-center md:justify-start">
-                            {achievement.icon}
-                            <div>
-                              <div className="font-bold text-sm sm:text-lg">{achievement.number}{achievement.suffix}</div>
-                              <div className="text-[10px] sm:text-xs text-muted-foreground">{achievement.label}</div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Vincent M. Cruz</h2>
+                    <p className="text-primary text-base sm:text-lg font-semibold mb-3 sm:mb-4">Web Developer</p>
                   </div>
                 </div>
 
