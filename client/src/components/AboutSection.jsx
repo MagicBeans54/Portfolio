@@ -44,7 +44,7 @@ export const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="relative py-16 md:py-28 px-4 sm:px-6 lg:px-12 bg-gradient-to-br from-background via-background to-primary/5 overflow-hidden">
+    <section id="about" className="relative py-16 md:py-28 px-4 sm:px-6 lg:px-12 bg-gradient-to-bl from-background via-background to-primary/5 overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-72 sm:w-96 h-72 sm:h-96 bg-primary/5 rounded-full blur-3xl transition-all duration-1000 ease-out" style={{ transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)` }} />

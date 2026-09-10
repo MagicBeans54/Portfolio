@@ -147,7 +147,7 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-28 px-4 bg-gradient-to-br from-background via-secondary/5 to-background">
+    <section id="skills" className="py-28 px-4 bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

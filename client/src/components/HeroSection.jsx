@@ -10,7 +10,7 @@ export const HeroSection = () => {
 
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-background/80 via-background/70 to-primary/5" ref={ref}>
+    <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5" ref={ref}>
       
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
