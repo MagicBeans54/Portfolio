@@ -3,20 +3,12 @@
 import * as React from 'react';
 
 function getStrictContext<T>(name?: string): [
-  React.Provider<T>,
+  React.ProviderExoticComponent<React.ProviderProps<T>>,
   () => T
 ] {
-  const Context = React.createContext<T | undefined>(undefined);
+  const Context = React.createContext<T>(undefined as T);
 
-  const Provider = ({
-    value,
-    children
-  }: {
-    value: T;
-    children: React.ReactNode;
-  }) => {
-    return <Context.Provider value={value}>{children}</Context.Provider>;
-  };
+  const Provider = Context.Provider;
 
   const useSafeContext = (): T => {
     const ctx = React.useContext(Context);

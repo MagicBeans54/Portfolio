@@ -29,7 +29,7 @@ function Particles({
   ...props
 }: ParticlesProps) {
   const { ref: localRef, isInView } = useIsInView(
-    ref,
+    ref as React.Ref<HTMLElement | null> | undefined,
     { inView, inViewOnce, inViewMargin },
   );
 
@@ -38,9 +38,9 @@ function Particles({
   return (
     <ParticlesProvider value={{ animate, isInView }}>
       <Component
-        ref={localRef}
+        ref={localRef as React.RefObject<HTMLDivElement>}
         style={{ position: 'relative', ...style }}
-        {...props}
+        {...(props as any)}
       >
         {children}
       </Component>

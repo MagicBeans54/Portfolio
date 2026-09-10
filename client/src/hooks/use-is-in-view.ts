@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useInView, type MarginType } from 'motion/react';
+import { useInView } from 'motion/react';
 
 interface UseIsInViewOptions {
   inView?: boolean;
   inViewOnce?: boolean;
-  inViewMargin?: MarginType;
+  inViewMargin?: string;
 }
 
 interface UseIsInViewResult {
@@ -21,7 +21,7 @@ function useIsInView(
   React.useImperativeHandle(ref, () => localRef.current);
   const inViewResult = useInView(localRef, {
     once: inViewOnce,
-    margin: inViewMargin,
+    margin: inViewMargin as any,
   });
   const isInView = !inView || inViewResult;
   return { ref: localRef, isInView };

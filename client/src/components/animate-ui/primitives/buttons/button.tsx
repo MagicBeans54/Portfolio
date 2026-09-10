@@ -14,6 +14,7 @@ function Button({
   hoverScale = 1.05,
   tapScale = 0.95,
   asChild = false,
+  children,
   ...props
 }: ButtonProps) {
   const Component = asChild ? Slot : motion.button;
@@ -22,8 +23,10 @@ function Button({
     <Component
       whileTap={{ scale: tapScale }}
       whileHover={{ scale: hoverScale }}
-      {...props}
-    />
+      {...(props as any)}
+    >
+      {children}
+    </Component>
   );
 }
 
