@@ -9,19 +9,14 @@ import jsIcon from "@/assets/icons/javascript.png";
 import tsIcon from "@/assets/icons/typescript.png";
 import reactIcon from "@/assets/icons/react.png";
 import nextjsIcon from "@/assets/icons/nextjs.png";
-import nodejsIcon from "@/assets/icons/nodejs.png";
-import expressIcon from "@/assets/icons/express.png";
+import nodejsIcon from "@/assets/icons/nodejs.png";// import expressIcon from "@/assets/icons/express.png";
 import mongodbIcon from "@/assets/icons/mongodb.png";
-import postgresqlIcon from "@/assets/icons/postgresql.png";
-import graphqlIcon from "@/assets/icons/graphql.png";
 import javaIcon from "@/assets/icons/java.png";
 import pythonIcon from "@/assets/icons/python.png";
 import gitIcon from "@/assets/icons/git.png";
 import githubIcon from "@/assets/icons/github.png";
-import dockerIcon from "@/assets/icons/docker.png";
 import firebaseIcon from "@/assets/icons/firebase.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
-import clearkIcon from "@/assets/icons/cleark.png";
 import SQLIcon from "@/assets/icons/sql.png";
 import MySQLIcon from "@/assets/icons/mysql.png";
 
@@ -30,27 +25,21 @@ const skills = [
   { name: "HTML5", level: 95, category: "frontend", icon: "html" },
   { name: "CSS3", level: 90, category: "frontend", icon: "css" },
   { name: "SASS", level: 85, category: "frontend", icon: "sass" },
-  { name: "JavaScript", level: 90, category: "frontend", icon: "javascript" },
-  { name: "TypeScript", level: 75, category: "frontend", icon: "typescript" },
-  { name: "React", level: 90, category: "frontend", icon: "react" },
-  { name: "Next.js", level: 75, category: "frontend", icon: "nextjs" },
+  { name: "JavaScript", level: 65, category: "frontend", icon: "javascript" },
+  { name: "TypeScript", level: 50, category: "frontend", icon: "typescript" },
+  { name: "React", level: 50, category: "frontend", icon: "react" },
+  { name: "Next.js", level: 50, category: "frontend", icon: "nextjs" },
 
   // Backend
-  { name: "Node.js", level: 90, category: "backend", icon: "nodejs" },
-  { name: "Express", level: 85, category: "backend", icon: "express" },
-  { name: "MongoDB", level: 90, category: "backend", icon: "mongodb" },
-  { name: "PostgreSQL", level: 65, category: "backend", icon: "postgresql" },
-  { name: "GraphQL", level: 60, category: "backend", icon: "graphql" },
+  { name: "Node.js", level: 75, category: "backend", icon: "nodejs" },
   { name: "Java", level: 60, category: "backend", icon: "java" },
   { name: "Python", level: 60, category: "backend", icon: "python" },
 
   // Tools
-  { name: "Git", level: 90, category: "tools", icon: "git" },
-  { name: "GitHub", level: 90, category: "tools", icon: "github" },
-  { name: "Docker", level: 70, category: "tools", icon: "docker" },
-  { name: "Firebase", level: 80, category: "tools", icon: "firebase" },
-  { name: "VS Code", level: 95, category: "tools", icon: "vscode" },
-  { name: "Cleark", level: 90, category: "tools", icon: "cleark" },
+  { name: "Git", level: 80, category: "tools", icon: "git" },
+  { name: "GitHub", level: 80, category: "tools", icon: "github" },
+  { name: "Firebase", level: 30, category: "tools", icon: "firebase" },
+  { name: "VS Code", level: 80, category: "tools", icon: "vscode" },
   { name: "SQL", level: 90, category: "tools", icon: "sql" },
   { name: "MySQL", level: 90, category: "tools", icon: "mysql" },
 ];
@@ -71,18 +60,13 @@ const iconImages = {
   react: reactIcon,
   nextjs: nextjsIcon,
   nodejs: nodejsIcon,
-  express: expressIcon,
   mongodb: mongodbIcon,
-  postgresql: postgresqlIcon,
-  graphql: graphqlIcon,
   java: javaIcon,
   python: pythonIcon,
   git: gitIcon,
   github: githubIcon,
-  docker: dockerIcon,
   firebase: firebaseIcon,
   vscode: vscodeIcon,
-  cleark: clearkIcon,
   sql: SQLIcon,
   mysql: MySQLIcon,
 };
@@ -114,8 +98,13 @@ const InfiniteScrollSkills = ({ skills }) => {
       >
         {duplicatedSkills.map((skill, index) => (
           <div key={`${skill.name}-${index}`} className="flex-shrink-0 flex flex-col items-center gap-2">
-            <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/50 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-              <img src={iconImages[skill.icon]} alt={skill.name} className="w-8 h-8 object-contain" />
+            <div 
+              className="w-16 h-16 bg-yellow-400 flex items-center justify-center shadow-lg hover:scale-110 transition-transform relative"
+              style={{
+                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+              }}
+            >
+              <img src={iconImages[skill.icon]} alt={skill.name} className="w-8 h-8 object-contain relative z-10" />
             </div>
             <span className="text-sm font-medium text-center">{skill.name}</span>
           </div>
@@ -129,8 +118,13 @@ const InfiniteScrollSkills = ({ skills }) => {
       >
         {[...duplicatedSkills].reverse().map((skill, index) => (
           <div key={`${skill.name}-reverse-${index}`} className="flex-shrink-0 flex flex-col items-center gap-2">
-            <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/50 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-              <img src={iconImages[skill.icon]} alt={skill.name} className="w-8 h-8 object-contain" />
+            <div 
+              className="w-16 h-16 bg-yellow-400 flex items-center justify-center shadow-lg hover:scale-110 transition-transform relative"
+              style={{
+                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+              }}
+            >
+              <img src={iconImages[skill.icon]} alt={skill.name} className="w-8 h-8 object-contain relative z-10" />
             </div>
             <span className="text-sm font-medium text-center">{skill.name}</span>
           </div>
@@ -147,12 +141,12 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-28 px-4 bg-gradient-to-br from-background via-background to-primary/5">
+    <section id="skills" className="py-28 bg-gradient-to-br from-background via-background to-primary/5">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
+          className="text-center mb-20 px-4"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
             My Skills
@@ -162,7 +156,7 @@ export const SkillsSection = () => {
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-16 pointer-events-auto">
+        <div className="flex flex-wrap justify-center gap-3 mb-16 pointer-events-auto px-4">
           {categories.map((category) => (
             <motion.button
               key={category.id}
@@ -179,10 +173,12 @@ export const SkillsSection = () => {
             </motion.button>
           ))}
         </div>
+      </div>
 
-        {activeCategory === "all" ? (
-          <InfiniteScrollSkills skills={skills} />
-        ) : (
+      {activeCategory === "all" ? (
+        <InfiniteScrollSkills skills={skills} />
+      ) : (
+        <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pointer-events-auto">
             <AnimatePresence mode="popLayout">
               {filteredSkills.map((skill) => (
@@ -223,8 +219,8 @@ export const SkillsSection = () => {
               ))}
             </AnimatePresence>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };

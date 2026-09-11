@@ -9,7 +9,7 @@ export const AboutSection = () => {
   const techStack = [
     { category: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "Tailwind"] },
     { category: "Backend", items: ["Node.js", "Express", "Java", "Python"] },
-    { category: "Cloud", items: ["AWS","Railway", "Vercel", "MongoDB"] }
+    { category: "Cloud", items: ["Railway", "Vercel", "MongoDB"] }
   ];
 
   const features = ["experienced Web Developer", "Clean, maintainable code", "Performance optimization", "Agile methodology", "24/7 support",];
