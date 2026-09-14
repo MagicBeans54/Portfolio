@@ -30,35 +30,7 @@ const projects = [
     designation: "Real-time Communication - Socket.IO",
     src: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
     link: "https://converse-pro-frontend.vercel.app",
-  },
-  {
-    name: "Blogni AI",
-    quote: "AI-powered content generation platform with multi-language support. Uses Next.js, Gemini AI, Clerk Auth, and Redis for caching.",
-    designation: "Artificial Intelligence - Next.js",
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
-    link: "https://blogni.vercel.app",
-  },
-  {
-    name: "Spendlix",
-    quote: "Financial tracking platform with expense management and budgeting features. Built with React, Chart.js, Node.js, and Firebase.",
-    designation: "FinTech - React/Chart.js",
-    src: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
-    link: "https://spendlix.vercel.app/login",
-  },
-  {
-    name: "Eattoo",
-    quote: "Food delivery platform with restaurant listings and order management. Built with React, Redux, Mapbox, and Stripe.",
-    designation: "Food Tech - React/Redux",
-    src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop",
-    link: "https://eattoo-food-delivery-website-frontend.onrender.com/",
-  },
-  {
-    name: "JobQue",
-    quote: "Job matching platform with candidate tracking and application management. Built with Next.js, PostgreSQL, Redis, and AI Integration.",
-    designation: "HR Tech - Next.js",
-    src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
-    link: "#",
-  },
+  }
 ];
 
 function openInNewTab(link) {

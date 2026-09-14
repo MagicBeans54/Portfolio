@@ -5,6 +5,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import CircularText from "./ui/CircularText";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,6 +62,13 @@ export const Footer = () => {
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Digital designer & developer creating meaningful experiences.
               </p>
+              <div className="flex justify-center my-4">
+                <CircularText
+                  text="Fortis*Fortuna*Adiuvat*"
+                  onHover="speedUp"
+                  spinDuration={20}
+                />
+              </div>
             </motion.div>
 
             {/* Navigation */}

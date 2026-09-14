@@ -63,7 +63,7 @@ A fast, modern, and responsive developer portfolio website built using **React**
    * Update `/src/data/skills.js` with your tech stack
    * Modify `/src/components` and `/src/pages` for layout or section changes
 
-## 🏗️ Build for Production
+
 
 ```bash
 npm run build
