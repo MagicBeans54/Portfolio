@@ -25,7 +25,14 @@ const projects = [
     link: "https://e-commerce-website-4w6a.vercel.app",
   },
   {
-    name: "Converse Pro",
+    name: "Frascio",
+    quote: "Webpage showcasing modern technology used in luxury toilets. Built using React and Tailwind CSS.",
+    designation: "E-commerce | React | Tailwind CSS",
+    src: "/projects/project3.png",
+    link: "https://frascio.vercel.app/",
+  },
+  {
+    name: "",
     quote: "Chat platform with real-time messaging, media sharing, and user authentication. Built with Socket.IO, MongoDB, React, and WebRTC.",
     designation: "Real-time Communication - Socket.IO",
     src: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
@@ -77,8 +84,22 @@ export const ProjectsSection = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Project
-            <span className="block text-primary">Portfolio</span>
+            <motion.span 
+              className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-transparent"
+              animate={{ backgroundPosition: ['0%', '100%', '0%'] }}
+              transition={{ duration: 8, repeat: Infinity }}
+              style={{ backgroundSize: '200% 100%' }}
+            >
+              Project
+            </motion.span>
+            <motion.span 
+              className="block bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 bg-clip-text text-transparent mt-2"
+              animate={{ backgroundPosition: ['0%', '100%', '0%'] }}
+              transition={{ duration: 8, repeat: Infinity }}
+              style={{ backgroundSize: '200% 100%' }}
+            >
+              Portfolio
+            </motion.span>
           </motion.h2>
 
           <motion.p 
