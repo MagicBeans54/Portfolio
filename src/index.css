@@ -65,6 +65,22 @@
       opacity: 0;
     }
   }
+  @keyframes honeycomb {
+    0%,
+    20%,
+    80%,
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    30%,
+    70% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
 }
 
 @layer base {
@@ -168,6 +184,72 @@
 
 ::-webkit-scrollbar{
   display:none
+}
+
+.honeycomb {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.honeycomb div {
+  position: absolute;
+  width: 30px;
+  height: 34px;
+  background-color: white;
+  border: 2px solid black;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: honeycomb 2.1s infinite backwards;
+}
+
+.honeycomb div:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0s;
+}
+
+.honeycomb div:nth-child(2) {
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.3s;
+}
+
+.honeycomb div:nth-child(3) {
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.6s;
+}
+
+.honeycomb div:nth-child(4) {
+  top: 34%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.15s;
+}
+
+.honeycomb div:nth-child(5) {
+  top: 34%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.45s;
+}
+
+.honeycomb div:nth-child(6) {
+  top: 66%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.75s;
+}
+
+.honeycomb div:nth-child(7) {
+  top: 66%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0.9s;
 }
 
 @theme inline {
