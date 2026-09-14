@@ -1,9 +1,5 @@
 import {
   ArrowUp,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
   Mail,
   Phone,
   MapPin,
@@ -13,13 +9,6 @@ import { motion } from "framer-motion";
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
-  const socialLinks = [
-    { icon: <Linkedin size={18} />, href: "https://linkedin.com/in/codewithkinu", label: "LinkedIn" },
-    { icon: <Instagram size={18} />, href: "https://instagram.com/dubbinut", label: "Instagram" },
-    { icon: <Youtube size={18} />, href: "https://youtube.com/@codewithkinu", label: "YouTube" },
-    { icon: <Github size={18} />, href: "https://github.com/sahilmd01", label: "GitHub" },
-  ];
-
   const quickLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
@@ -28,8 +17,8 @@ export const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <Mail size={16} />, text: "codewithkinu@gmail.com", href: "mailto:codewithkinu@gmail.com.com" },
-    { icon: <Phone size={16} />, text: "+91 9315145594", href: "tel:+919315145594" },
+    { icon: <Mail size={16} />, text: "vinentcruz54@gmail.com", href: "mailto:vincentcruz54@gmail.com.com" },
+    { icon: <Phone size={16} />, text: "+63 9165461438", href: "tel:+639165461438" },
   ];
 
   const containerVariants = {
@@ -68,26 +57,10 @@ export const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Branding */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">SAHIL</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">Vincent Cruz</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Digital designer & developer creating meaningful experiences.
               </p>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors duration-300"
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
             </motion.div>
 
             {/* Navigation */}
@@ -169,7 +142,7 @@ export const Footer = () => {
             viewport={{ once: true }}
           >
             <div>
-              <p>© {currentYear} Sahil. All rights reserved.</p>
+              <p>© {currentYear} Vincent Cruz. All rights reserved.</p>
             </div>
             
             <div className="flex items-center space-x-6">

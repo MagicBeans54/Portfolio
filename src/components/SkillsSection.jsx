@@ -45,10 +45,10 @@ const skills = [
 ];
 
 const categories = [
-  { id: "all", label: "All Skills", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
-  { id: "frontend", label: "Frontend", color: "bg-gradient-to-r from-blue-500 to-cyan-500" },
-  { id: "backend", label: "Backend", color: "bg-gradient-to-r from-green-500 to-emerald-500" },
-  { id: "tools", label: "Tools", color: "bg-gradient-to-r from-orange-500 to-yellow-500" },
+  { id: "all", label: "All Skills", color: "bg-gradient-to-r from-yellow-400 to-yellow-600" },
+  { id: "frontend", label: "Frontend", color: "bg-gradient-to-r from-yellow-300 to-yellow-500" },
+  { id: "backend", label: "Backend", color: "bg-gradient-to-r from-yellow-500 to-amber-500" },
+  { id: "tools", label: "Tools", color: "bg-gradient-to-r from-yellow-400 to-orange-500" },
 ];
 
 const iconImages = {
@@ -148,7 +148,7 @@ export const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-20 px-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">
             My Skills
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
