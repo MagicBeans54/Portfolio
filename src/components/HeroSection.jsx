@@ -62,7 +62,7 @@ export const HeroSection = () => {
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Laravel, Inertia, and scalable architecture for startups and enterprises.
+              I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Laravel, and scalable architecture for startups and enterprises.
             </motion.p>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pointer-events-auto" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
