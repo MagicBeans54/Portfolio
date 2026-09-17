@@ -24,7 +24,6 @@ const skills = [
   // Frontend
   { name: "HTML5", level: 95, category: "frontend", icon: "html" },
   { name: "CSS3", level: 90, category: "frontend", icon: "css" },
-  { name: "SASS", level: 85, category: "frontend", icon: "sass" },
   { name: "JavaScript", level: 65, category: "frontend", icon: "javascript" },
   { name: "TypeScript", level: 50, category: "frontend", icon: "typescript" },
   { name: "React", level: 50, category: "frontend", icon: "react" },
