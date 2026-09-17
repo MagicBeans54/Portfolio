@@ -31,13 +31,6 @@ const projects = [
     src: "/projects/project3.png",
     link: "https://frascio.vercel.app/",
   },
-  {
-    name: "",
-    quote: "Chat platform with real-time messaging, media sharing, and user authentication. Built with Socket.IO, MongoDB, React, and WebRTC.",
-    designation: "Real-time Communication - Socket.IO",
-    src: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=600&fit=crop",
-    link: "https://converse-pro-frontend.vercel.app",
-  }
 ];
 
 function openInNewTab(link) {
@@ -109,7 +102,7 @@ export const ProjectsSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            A collection of projects I've built to showcase my skills in full-stack development and modern web technologies.
+            A collection of projects I've built to showcase my skills in web development and modern web technologies.
           </motion.p>
         </motion.div>
 
