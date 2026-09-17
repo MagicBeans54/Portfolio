@@ -12,10 +12,10 @@ export const AboutSection = () => {
     { category: "Cloud", items: ["Railway", "Vercel", "MongoDB"] }
   ];
 
-  const features = ["experienced Web Developer", "Clean, maintainable code", "Performance optimization", "Agile methodology", "24/7 support",];
+  const features = ["experienced Web Developer", "Clean, maintainable code", "Performance optimization", "Agile methodology", "Problem-solving mindset",];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "#" },
+    { icon: <Github className="h-5 w-5" />, href: "https://github.com/MagicBeans54" },
     { icon: <Linkedin className="h-5 w-5" />, href: "#" },
     { icon: <Twitter className="h-5 w-5" />, href: "#" },
     { icon: <Mail className="h-5 w-5" />, href: "mailto:vincentcruz54@gmail.com" }
