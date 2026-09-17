@@ -22,7 +22,7 @@ const projects = [
     quote: "A comprehensive HR/Admin Management System that keeps track of Techstacks employee's time, attendance, payroll and work requests.",
     designation: "HR/Admin Management System - React | InertiaJS | Laravel",
     src: "/projects/project2.png",
-    link: "https://e-commerce-website-4w6a.vercel.app",
+    link: "https://techstacks-production-32e7.up.railway.app/login",
   },
   {
     name: "Frascio",
@@ -182,19 +182,19 @@ export const ProjectsSection = () => {
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 pointer-events-auto"
               >
                 Contact Me
                 <ArrowRight size={18} />
               </motion.a>
               
               <motion.a
-                href="https://github.com/sahilmd01"
+                href="https://github.com/MagicBeans54"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-medium border border-border text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-medium border border-border text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300 pointer-events-auto"
               >
                 <Github size={18} />
                 View GitHub
