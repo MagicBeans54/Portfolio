@@ -70,8 +70,8 @@ export const ProjectsSection = () => {
             My Projects
           </motion.div>
 
-          <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+          <motion.h2
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
@@ -136,6 +136,24 @@ export const ProjectsSection = () => {
               top: "8",
               bottom: "8",
             }}
+            mobile={{
+              fontSizes: {
+                name: "1.5rem",
+                position: "0.75rem",
+                testimony: "1rem",
+              },
+              spacing: {
+                nameTop: "0",
+                nameBottom: "0.25em",
+                positionTop: "0",
+                positionBottom: "0.125em",
+                testimonyTop: "0.5em",
+                testimonyBottom: "0.5em",
+                lineHeight: "1.4",
+                top: "4",
+                bottom: "4",
+              },
+            }}
             halomotButtonGradient="linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.8))"
             halomotButtonBackground="hsl(var(--background))"
             halomotButtonTextColor="hsl(var(--primary-foreground))"
@@ -161,7 +179,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="bg-background border border-border rounded-2xl p-12 max-w-4xl mx-auto">
+          <div className="bg-background border border-border rounded-2xl p-6 md:p-12 max-w-4xl mx-auto">
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -172,7 +190,7 @@ export const ProjectsSection = () => {
               Get In Touch
             </motion.div>
 
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Like what you see?</h3>
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Like what you see?</h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               I'm always open to discussing new opportunities and interesting projects.
             </p>
