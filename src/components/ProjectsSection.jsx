@@ -5,7 +5,7 @@ import { ProjectShowcase } from "@/components/ui/project-showcase";
 const projects = [
   {
     name: "Dreamforce Services",
-    quote: "Website for an International recruitment agency based in Ontario, Canada that specializes in recruiting filipino workers for various industries.",
+    quote: "Website for an International recruitment agency based in Ontario, Canada that specializes in recruiting filipino workers as well as local workers for various industries.",
     designation: "Website | CMS | WordPress | Elementor",
     src: "/projects/project.png",
     link: "https://dreamforceservices.ca",
